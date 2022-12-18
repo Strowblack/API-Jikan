@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+    background-image: url(img/5868032.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+#estadoform select{
+    width: 150px;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+.resultados{
+    padding-top: 20px;
+}
+.card0{
+    width: 220px;
+    height: 500px;
+    float: left;
+    padding: 0 10px 20px 0;
+}
+.card2{
+    width: 220px;
+    height: 490px;
+    float: left;
+    padding: 0 10px 20px 0;
+}
+.resultados{
+    padding-left: 40px;
+}
+#cuidado{
+    float: left;
+    padding-left: 550px;
+}
+button{
+    height: 30px;
+    width: 60px;
+}
+#eastereggs{
+    display: none;
+}
+button{
+    width: auto;
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 10px;
+    font-size: 15px;
+    font-style: italic;
+    color: #ffffff;
+    background-color: #0d0acd;
+    border-radius: 15px;
+    border: 3px double #ffffff;
+}
+button:hover{
+    opacity: 0.8;
+    text-decoration: none;
+    background-color: #ff00ee;
+}

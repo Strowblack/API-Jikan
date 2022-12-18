@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIKAN!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio controls id="eastereggs">
+        <source src="「 ES! 」SwEeT MeLlOw MeLoDy - Hinata Aoi [KAN ROM ENG].mp3">
+    </audio>
+    <div class="contenedor">
+        <div>
+            <div>
+                <input type="radio" name="Anime" id="Anime" checked>Anime
+                <input type="radio" name="Anime" id="Personajes">Personajes
+                <input type="radio" name="Anime" id="Mangas">Manga
+            </div>
+            <div id="anbutton">
+                <input type="radio" name="Animesub" id="AnimeNombre" checked>Nombre
+                <button  id="AnimeTop">Top 25</button>
+            </div>
+            <div id="pjbutton" style="display: none;">
+                <input type="radio" name="Animepj" id="PjNombre" checked>Nombre
+                <button  id="PjTop">Top 25</button>
+            </div>
+            <div id="mgbutton" style="display: none;">
+                <input type="radio" name="Animemg" id="MangaNombre" checked>Nombre
+                <button  id="MangaTop">Top 25</button>
+            </div>
+        </div>  
+        <form id="busqueda" action="">
+            <input type="text" id="nombre">
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="estadoform" style="display: none;">
+            <select name="" id="selectestado">
+                <option value="En emision" id="En emision">En emision</option>
+                <option value="Finalizado" id="Finalizado">Finalizado</option>
+            </select>
+        </div>
+        <div class="resultados">    
+        </div>
+        <div id="cuidado" style="display: none;">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+    
+    <script src="03-appRick.js"></script>
+</body>
+</html>
