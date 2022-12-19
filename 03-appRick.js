@@ -38,14 +38,14 @@ async function getCharactersByName(name) {
         return json;
     }
 }
-
+//----- Buscar top 25 -----//
 async function getTop(name) {
         const urlFetch = name;
         const response = await fetch(urlFetch);
         const json = await response.json();
         return json;
 }
-
+//----- Pasar a la siguiente página -----//
 async function getnext() {
     pagina += 1;
     if (document.getElementById("Personajes").checked) {
@@ -60,7 +60,7 @@ async function getnext() {
     const json = await response.json();
     return json;
 }
-
+//----- Retroceder a la anterior página -----//
 async function getprev() {
     pagina -= 1;
     if (document.getElementById("Personajes").checked) {
@@ -75,7 +75,7 @@ async function getprev() {
     const json = await response.json();
     return json;
 }
-
+//----- Buscar anime/manga/personaje -----//
 formulario.addEventListener("submit", e => {
     e.preventDefault();
     const name = inputNombre.value.trim();
@@ -151,7 +151,7 @@ formulario.addEventListener("submit", e => {
                         botones.style.display = "block";
                     }
                 });
-            }
+            }//----- Si no encuentra nada, te sale esto como un "error" -----//
             if (divResultados.innerHTML == "") {
                 var template = `<div class="card0">
                 <div >
@@ -165,7 +165,7 @@ formulario.addEventListener("submit", e => {
             }
         });
 });
-
+//----- Al apretar el boton de siguiente pagina te realiza la función -----//
 next.addEventListener("click", function () {
     divResultados.innerHTML = "";
     getnext()
@@ -244,7 +244,7 @@ next.addEventListener("click", function () {
         })
 })
 
-
+//----- Al apretar el boton de pagina anterior te realiza la función -----//
 prev.addEventListener("click", function () {
     if (pagina < 2) {
         pagina += 1;
@@ -326,7 +326,7 @@ prev.addEventListener("click", function () {
             })
     }
 })
-
+//----- Sirve para saber cuando está seleccionado anime, manga o personaje -----//
 document.addEventListener("click",function(){
     if(document.getElementById("Personajes").checked){
         anbutton.style.display="none";
@@ -342,6 +342,7 @@ document.addEventListener("click",function(){
         mgbutton.style.display="none";
     }
 });
+//----- Mostrar el top 25 personajes -----//
 btPjTop.addEventListener("click",function(){
     var name = toppj;
     getTop(name)
@@ -373,6 +374,7 @@ btPjTop.addEventListener("click",function(){
     }
     )
 });
+//----- Mostrar el top 25 mangas -----//
 mgbttop.addEventListener("click",function(){
     var name = topmanga;
     getTop(name)
@@ -402,6 +404,7 @@ mgbttop.addEventListener("click",function(){
     }
     )
 });
+//----- Mostrar el top 25 animes -----//
 bttop.addEventListener("click",function(){
     var name = topanime;
     getTop(name)
